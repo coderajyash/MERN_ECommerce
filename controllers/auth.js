@@ -35,7 +35,7 @@ exports.signup = (req,res)=>{
     })
 }
 exports.signin =(req,res)=>{
-    //CHeck here for error 
+    //Check here for error 
     const errors = validationResult(req)
 
     const {email,password} =req.body

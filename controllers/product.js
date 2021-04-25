@@ -139,7 +139,7 @@ exports.getProductById = (req,res,next,id)=>{
         })
     } 
 
-
+    
     exports.getAllProduct =(req,res)=>{
         let limit= req.query.limit ? parseInt(req.query.limit): 8
         let sortBy= req.query.sortBy ? req.query.sortBy: "_id"
@@ -192,3 +192,4 @@ exports.getProductById = (req,res,next,id)=>{
             res.json(category)
         })
     }
+    

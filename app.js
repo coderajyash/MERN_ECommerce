@@ -19,6 +19,8 @@ const productRoutes = require("./routes/product")
 const orderRoutes = require("./routes/order")
 
 
+
+
 //if connecting to atlas then the url strng will be from there
 
 
@@ -44,6 +46,8 @@ app.use("/api",userRoutes)
 app.use("/api",categoryRoutes)
 app.use("/api",productRoutes)
 app.use("/api",orderRoutes)
+
+
 
 
 //To deploy the app on the web we need to make changes to th port as

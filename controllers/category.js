@@ -34,7 +34,7 @@ exports.getCategory = (req,res) =>{
 
 exports.getAllCategory = (req,res) =>{
     //find does not have any parameter because we need all categories
-    Category.find(),exec((err,items)=>{
+    Category.find().exec((err,items)=>{
         if(err){
             return res.staus(400).json({
                 error:"No Category found"
