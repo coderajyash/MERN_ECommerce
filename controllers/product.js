@@ -150,8 +150,10 @@ exports.getAllProduct = (req, res) => {
         .limit(limit)
         .exec((err, products) => {
             if (err) {
+                console.log("Error ---", err)
                 return res.status(400).json({
                     error: "No Product Found"
+                
                 })
             }
             res.json(products)
