@@ -5,7 +5,7 @@ const {getUserById,pushOrderInPurchaseList} = require("../controllers/user")
 const {updateStock} = require("../controllers/product")
 
 
-const {getOrderById,createOrder,getAllOrders,getOrderStatus,updateStatus} = require("../controllers/order")
+const {getOrderById,createOrder,getAllOrders} = require("../controllers/order")
 
 
 //params
@@ -17,8 +17,6 @@ router.post("/order/create/:userId",isSignedIn,isAuthenticated,pushOrderInPurcha
 router.get("/odrder/all/:userId",isSignedIn,isAuthenticated,isAdmin,getAllOrders)
 
 
-//status of orders
-router.get("/odrder/status/:userId",isSignedIn,isAuthenticated,isAdmin,getOrderStatus)
-router.put("/odrder/:orderId/status/:userId",isSignedIn,isAuthenticated,isAdmin,updateStatus)
+
 
 module.exports = router;

@@ -64,7 +64,7 @@ exports.userPurchaseList =(req,res)=>{
         })
     }
     //moddleware for order list
-    exports.pushOrderInPurchaseList = (req,res,next)=>{
+exports.pushOrderInPurchaseList = (req,res,next)=>{
         let purchases =[]
         req.body.order.products.array.forEach(product => {
             purchases.push({
@@ -92,7 +92,7 @@ exports.userPurchaseList =(req,res)=>{
              (err,purchases)=>{
                  if(err){
                      return res.status(400).json({
-                         error:"Unale to save purchase list"
+                         error:"Unable to save purchase list"
                      })
                  }
                  next();
